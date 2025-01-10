@@ -1,0 +1,479 @@
+/* KLEURENSCHEMAS */
+:root {
+    --huisstijl-zwart: #000000;
+    --huisstijl-wit: #FFFFFF;
+    --huisstijl-groen: #ABD7A8;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/*ALGEMEEN*/
+.wrapper {
+    background-color: #fff;
+    min-height: 81vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: #45a049;
+    color: var(--huisstijl-wit);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: var(--huisstijl-groen);
+}
+
+/*TABBLADEN*/
+
+nav#gebruikersprofiel-tabs {
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
+    margin-top: -20px;
+    padding: 1rem;
+    border-radius: 0 0 16px 16px;
+}
+
+nav#gebruikersprofiel-tabs a {
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav#gebruikersprofiel-tabs a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav#gebruikersprofiel-tabs a:hover::after {
+    width: 100%;
+}
+
+nav#gebruikersprofiel-tabs a:hover::after,
+nav#gebruikersprofiel-tabs a:focus::after { 
+    width: 100%;
+}
+
+nav#gebruikersprofiel-tabs a:hover,
+nav#gebruikersprofiel-tabs a:focus { 
+    color: #333; 
+}
+
+nav#gebruikersprofiel-tabs a.actief {
+    font-weight: bold;
+    cursor: default;
+}
+
+nav#gebruikersprofiel-tabs a.actief::after {
+    width: 100%;
+}
+
+/**** Meer info knop style ****/
+
+.artikelContainer button {
+    background-color: var(--huisstijl-zwart);
+    color: var(--huisstijl-wit);
+    font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    width: 75%;
+    margin: 0.25rem 12.5%;
+    height: 1.75rem;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.artikelContainer button:focus {
+    outline: 3px solid var(--huisstijl-groen);
+}
+
+.artikelContainer button:hover {
+    background-color: var(--huisstijl-groen);
+}
+
+
+
+
+
+
+
+
+/*ACCOUNTOVERZICHT*/
+#Accountoverzicht-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.titelh1 {
+    width: 100%;
+}
+
+#Accountoverzicht-container>div>form>h3 {
+    width: 100%;
+}
+
+#Accountoverzicht-container>div {
+    width: 45%;
+}
+
+#Accountoverzicht-container>div>form {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#Accountoverzicht-container>div>form>label {
+    width: 30%;
+    margin-top: 1rem;
+    display: grid;
+    place-items: center left;
+}
+
+#Accountoverzicht-container>div>form>input[type=text],
+#Accountoverzicht-container>div>form>input[type=password] {
+    width: 68%;
+    margin-top: 1rem;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+}
+
+#Accountoverzicht-container>div>form>.button-container {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BESTELGESCHIEDENIS*/
+.bestelbon {
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.bestelbon>.bestelbon-gegevens {
+    border: 2px solid rgba(0, 0, 0, 0.718);
+    border-radius: 16px 16px 0 0;
+    border-bottom: none;
+    padding: 0 1rem 0 1rem;
+    background-color: lightgray;
+
+
+}
+
+.bestelbon>.bestelde-artikels-container {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0 16px 16px 16px;
+
+}
+
+/*CUSTOM SCROLLBAR GLOBALLY*/
+.bestelde-artikels-container::-webkit-scrollbar {
+    height: 20px;
+}
+
+.bestelde-artikels-container::-webkit-scrollbar-thumb {
+    background-color: var(--huisstijl-zwart);
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+.bestelde-artikels-container::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0);
+}
+
+.bestelbon-gegevens>p {
+    margin: 0;
+}
+
+.artikelContainer {
+    width: 15rem;
+    min-width: 15rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+}
+
+.fotoContainer {
+    width: 100%;
+    height: 10rem;
+    display: grid;
+    place-items: center;
+}
+
+.fotoContainer img {
+    max-width: 75%;
+}
+
+.artikelinfo {
+    width: 100%;
+    position: relative;
+}
+
+.artikelNaam {
+    width: 75%;
+}
+
+.aantal-besteld {
+    color: green;
+}
+
+.artikelVoorraad {
+    color: red;
+}
+
+.toevoegenAanWinkelmandKnop {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.schrijf-review-link {
+    text-decoration: none;
+}
+
+.artikelinfo>.toevoegenAanWinkelmandKnop {
+    text-decoration: none;
+    color: var(--huisstijl-zwart);
+}
+
+.artikelinfo>a:hover {
+    color: var(--huisstijl-groen);
+}
+
+.account-blokkeren-container {
+    width: 100%;
+    text-align: center;
+}
+
+.score {
+    width: fit-content;
+    color: rgba(0, 0, 0, 0);
+    background: linear-gradient(90deg, var(--huisstijl-groen) var(--percent), rgba(0, 0, 0, 0.2) var(--percent));
+    background-clip: initial;
+    -webkit-background-clip: text;
+    font-size: 2rem;
+    margin: 0 auto 1rem auto;
+    cursor: default;
+}
+
+.geen {
+    color: inherit;
+    background: none;
+    font-size: inherit;
+    padding-top: 0.687rem;
+    height: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*MIJN REVIEWS*/
+#Mijnreviews-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Mijnreviews-container>h1 {
+    width: 100%;
+}
+
+.review-container {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 16px;
+    width: 15rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    position: relative;
+}
+
+.datum-geplaatst {
+    font-size: 0.8rem;
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+
+}
+
+.bewerk-review-links-container a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--huisstijl-zwart);
+    transition: color 300ms;
+    cursor: pointer;
+}
+
+.bewerk-review-links-container a:hover {
+    color: var(--huisstijl-groen);
+}
+
+.review-commentaar {
+    font-weight: bold;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+
+
+
+
+
+.annuleer-stuks-form>label {
+    color: red;
+}
+
+.annuleer-stuks-form>select {
+    cursor: pointer;
+}
+
+.annuleer-stuks-form>input[type=submit] {
+    background-color: rgb(134, 0, 0);
+    color: var(--huisstijl-wit);
+    font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    height: 1.2rem;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.annuleer-stuks-form>input[type=submit]:hover {
+    background-color: red;
+}
+
+.review-container>form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.review-container>form>textarea {
+    resize: none;
+    width: 95%;
+    height: 4rem;
+}
+
+
+
+.ster_label {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+#ster1:hover~.ster_label {
+color: red;
+}
+
+.sterrenScore {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.ster_radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ster_label {
+    padding: 0 0.1rem;
+}
+
+.ster_radio+.ster_label:hover {
+    cursor: pointer;
+}
+
+.ster5:hover~.ster_label,
+.ster4:hover~.ster_label,
+.ster3:hover~.ster_label,
+.ster2:hover~.ster_label,
+.ster1:hover~.ster_label {
+    color: rgba(171, 215, 168, 0.65);
+}
+
+.ster5:checked~.ster_label,
+.ster4:checked~.ster_label,
+.ster3:checked~.ster_label,
+.ster2:checked~.ster_label,
+.ster1:checked~.ster_label {
+    color: var(--huisstijl-groen);
+}
+
+
+
+@media (max-width: 768px) {
+    #gebruikersprofiel-tabs {
+        flex-direction: column;
+    }
+
+    #gebruikersprofiel-tabs a {
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    #Accountoverzicht-container>div {
+        width: 100%;
+
+    }
+}

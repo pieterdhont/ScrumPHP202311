@@ -1,0 +1,224 @@
+/* dark.css */
+
+/* Algemene stijlen voor elementen in donkere modus */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Stijlen voor de header en footer */
+.dark-mode header,
+.dark-mode footer {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+/* Stijlen voor koppelingen in header en footer */
+.dark-mode header a.linkHeader,
+.dark-mode footer a.linkFooter,
+.dark-mode #link-accountoverzicht,
+.dark-mode #link-bestelgeschiedenis,
+.dark-mode #link-mijnreviews {
+    color: #ffffff;
+}
+
+/* Stijlen voor de outline van de header-icoontjes */
+.dark-mode div#menusHeader img.menuHeaderAfbeelding.actief {
+    outline: 2px solid white;
+}
+
+/* Stijlen voor formulieren en contactgegevens in donkere modus */
+.dark-mode #login,
+.dark-mode #register,
+.dark-mode .contact-container,
+.dark-mode #wijzig-facturatieadres,
+.dark-mode #wijzig-leveradres,
+.dark-mode #wijzig-bedrijfsgegevens,
+.dark-mode #wijzig-paswoord,
+.dark-mode #gebruikersprofiel-tabs,
+.dark-mode .sitemap-container {
+    background-color: #333333;
+    color: #ffffff;
+    border: #1a1a1a;
+}
+.dark-mode #winkelmand-container {
+    color: #333333;
+}
+.dark-mode .login-container {
+    background-color: #333333;
+    border: #333333;
+}
+
+/* Stijlen voor dia's in de spotlight */
+.dark-mode .slider_container {
+    background-color: #333333;
+}
+
+.dark-mode .slider_container .artikelContainer {
+    background-color: #1a1a1a;
+}
+
+/* Stijlen voor contactgegevens */
+.dark-mode .contact-container {
+    border-color: #1a1a1a;
+}
+
+/* Stijlen voor de wrapper */
+.dark-mode .wrapper {
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+/* Stijlen voor de ::after van actievePagina in de linkHeader */
+.dark-mode a.linkHeader.actievePagina::after {
+    background-color: white;
+}
+
+/* Stijlen voor de ::after van linkHeader */
+.dark-mode a.linkHeader::after {
+    background-color: white;
+}
+
+/* Stijlen voor artikelContainer */
+.dark-mode .artikelContainer {
+    background-color: #282828;
+}
+
+/* Stijlen voor de faq */
+.dark-mode .faq {
+    background-color: #333333;
+    border-color: #1a1a1a;
+}
+
+/* Stijlen voor toevoegenAanWinkelmandKnop en hoofdCategorie */
+.dark-mode .toevoegenAanWinkelmandKnop,
+.dark-mode .hoofdCategorie {
+    color: white;
+}
+
+/* Stijlen voor subCategorie */
+.dark-mode .subCategorie {
+    color: rgb(225, 225, 225);
+}
+
+/* Stijlen voor subSubCategorie */
+.dark-mode .subSubCategorie {
+    color: rgb(199, 199, 199);
+}
+
+/* Stijlen voor bestelbon-gegevens */
+.dark-mode .bestelbon-gegevens {
+    background-color: #333333;
+}
+
+/* Stijlen voor de pijl */
+.dark-mode .pijl {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+/* Stijlen voor de knop 'Wis zoekresultaat' */
+.dark-mode #wisZoekResultaten,
+.dark-mode #sorteerKnop,
+.dark-mode #zoekFormulier button {
+    background-color: white;
+    color: #333333;
+}
+
+/* Stijlen voor de social media icons */
+.dark-mode img[src="./assets/facebook.svg"],
+.dark-mode img[src="./assets/twitterX.svg"],
+.dark-mode img[src="./assets/instagram.svg"],
+.dark-mode img[src="./assets/pinterest.svg"] {
+    filter: brightness(0) invert(1);
+}
+
+/* Stijlen voor de review-container */
+.dark-mode .review-container {
+    background-color: #282828;
+}
+
+.dark-mode .score {
+    width: fit-content;
+    color: rgba(0, 0, 0, 0);
+    background: linear-gradient(90deg, var(--huisstijl-groen) var(--percent), white var(--percent));
+    background-clip: initial;
+    -webkit-background-clip: text;
+    font-size: 2rem;
+    margin: 0 auto 1rem auto;
+    cursor: default;
+}
+
+.dark-mode #categorie-pad * {
+    color: white;
+}
+
+/* Stijlen voor het beeld met id "mobileMenuImage" in donkere modus */
+.dark-mode #mobileMenuImage {
+    filter: brightness(100%) invert(100%);
+}
+
+/* Stijlen voor de tekst binnen het element met klasse "popupMenu" en id "wishlistDiv" in donkere modus */
+.dark-mode #wishlistDiv p {
+    color: black;
+}
+
+/* Stijlen voor de tekst binnen de knop met klasse "button" en id "toevoegenMetAantalAanWinkelmand" in donkere modus */
+.dark-mode .container button, 
+.dark-mode .container input[type="submit"] {
+background-color: white;
+color: black;
+}
+/* Stijlen voor tekstkleur binnen links met klassen "bewerk-review-link" en "verwijder-review-link" in donkere modus */
+.dark-mode .bewerk-review-links-container a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: white;
+    transition: color 300ms;
+    cursor: pointer;
+}
+.dark-mode .bewerk-review-links-container a:hover {
+    color: var(--huisstijl-groen);
+}
+
+.dark-mode .ster_label {
+    font-size: 2rem;
+    color: white;
+}
+
+.dark-mode #gebruikersprofiel-tabs a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    color: white;
+}
+
+.dark-mode nav#gebruikersprofiel-tabs a:hover,
+.dark-mode #gebruikersprofiel-tabs a:focus { 
+    color: white;
+}
+
+/* Stijlen voor tekstkleur binnen het element met de klasse "score geen" in donkere modus */
+.dark-mode .score.geen {
+    color: white;
+    background: none;
+    font-size: inherit;
+    padding-top: 0.687rem;
+    height: 2rem;
+}
+
+/* Stijlen voor tekstkleur binnen het element met de klasse "schrijf-review-link" in donkere modus */
+.dark-mode a.schrijf-review-link {
+    color: white;
+}
+.dark-mode  a.schrijf-review-link:hover {
+    color: green;
+}

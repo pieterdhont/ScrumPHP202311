@@ -1,0 +1,52 @@
+/* footer.css */
+
+/* ALGEMENE STIJLEN */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    background-color: lightgray;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+h5, p {
+margin: 0;
+}
+
+footer img {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* SECTIE STIJLEN */
+.adresgegevens,
+.sociale-media,
+.disclaimer {
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* TYPOGRAFIE */
+footer p {
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        margin-top: 0;
+    }
+}

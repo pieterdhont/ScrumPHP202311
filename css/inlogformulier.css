@@ -1,0 +1,131 @@
+/* TYPOGRAFIE */
+body {
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 100%;
+}
+
+/* KLEURSCHEMA'S */
+:root {
+  --huisstijl-zwart: #000000;
+  --huisstijl-wit: #ffffff;
+  --huisstijl-groen: #abd7a8;
+}
+
+body {
+  background: var(--huisstijl-wit);
+  color: var(--huisstijl-zwart);
+}
+
+/* FORMULIERSTIJLEN */
+label {
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: flex-start;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#facturatie {
+}
+
+#feedback-container {
+  position: sticky;
+  top: 60px;
+  width: 100%;
+  color: #721c24;
+  text-align: center;
+}
+
+#feedback {
+  text-align: center;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  background-color: #45a049;
+  color: var(--huisstijl-wit);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: var(--huisstijl-groen);
+}
+
+/* LAYOUTSTIJLEN */
+.login-container {
+  max-width: 800px;
+  margin: auto;
+  background-color: var(--huisstijl-wit);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px #0000001a;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #ddd;
+}
+
+form {
+  width: 45%;
+}
+
+#login,
+#register {
+  width: 50%;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+#login {
+  border-right: 1px solid #ddd;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-container label {
+  flex: 3;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  flex: 1;
+  justify-content: left;
+  accent-color: var(--huisstijl-groen);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  #login,
+  #register {
+    width: 100%;
+    border-right: none;
+    padding: 0;
+  }
+
+  #login {
+    border-bottom: solid 1px #ddd;
+  }
+}

@@ -1,0 +1,52 @@
+body {
+    font-family:sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* KLEURSCHEMA'S */
+:root {
+    --huisstijl-zwart: #000000;
+    --huisstijl-wit: #ffffff;
+    --huisstijl-groen: #abd7a8;
+  }
+
+  body {
+    background: var(--huisstijl-wit);
+    color: var(--huisstijl-zwart);
+  }
+
+  .sitemap-container {
+    max-width: 600px;
+    min-height: auto;
+    margin: auto;
+    background-color: var(--huisstijl-wit);
+    border-radius: 8px;
+    padding: 40px 100px;
+    box-shadow: 0 0 10px #0000001a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ddd;
+    position: relative;
+    
+  }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

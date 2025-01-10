@@ -1,0 +1,518 @@
+/* TYPOGRAFIE */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 100%;
+}
+
+/* KLEURENSCHEMAS */
+
+:root {
+    --huisstijl-zwart: #000000;
+    --huisstijl-wit: #FFFFFF;
+    --huisstijl-groen: #ABD7A8;
+}
+
+body {
+    background: var(--huisstijl-wit);
+    color: var(--huisstijl-zwart);
+}
+
+.artikelinfo a {
+    color: var(--huisstijl-zwart);
+}
+
+.artikelinfo a:hover {
+    color: var(--huisstijl-groen);
+}
+
+/**** STRUCTUUR EN LAY-OUT ****/
+
+body {
+    min-height: 100vh;
+}
+
+section h1 {
+    margin: 1rem 0 0.4rem 2rem;
+}
+
+#overzicht {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.ovezichtArtikels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.artikelContainer {
+    width: 15rem;
+    min-height: 21.15rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.fotoContainer {
+    width: 100%;
+    height: 10rem;
+    display: grid;
+    place-items: center;
+    margin-bottom: 0.4rem;
+}
+
+.fotoContainer img {
+    max-width: 75%;
+}
+
+.artikelinfo {
+    width: 100%;
+    position: relative;
+}
+
+.artikelNaam {
+    width: 75%;
+}
+
+.artikelVoorraad {
+    color: red;
+}
+
+.toevoegenAanWinkelmandKnop {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.score {
+    width: fit-content;
+    color: rgba(0, 0, 0, 0);
+    background: linear-gradient(90deg, var(--huisstijl-groen) var(--percent), rgba(0, 0, 0, 0.2) var(--percent));
+    background-clip: initial;
+    -webkit-background-clip: text;
+    font-size: 2rem;
+    margin: 0 auto 1rem auto;
+    cursor: default;
+}
+
+.geen {
+    color: inherit;
+    background: none;
+    font-size: inherit;
+    padding-top: 0.687rem;
+    height: 2rem;
+}
+
+
+
+/**** Meer info knop style ****/
+
+.artikelContainer button {
+    background-color: var(--huisstijl-zwart);
+    color: var(--huisstijl-wit);
+    font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    width: 75%;
+    height: 1.75rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 7.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 200ms;
+}
+
+.artikelContainer button:focus {
+    outline: 3px solid var(--huisstijl-groen);
+}
+
+.artikelContainer button:hover {
+    background-color: var(--huisstijl-groen);
+}
+
+/**** Pagina Navigator Style ****/
+
+.pijl {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.links {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-right: 0.5rem;
+}
+
+.rechts {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: 0.5rem;
+}
+
+.paginaNavigatie {
+    width: fit-content;
+    margin: 0.5rem auto;
+}
+
+#paginaNummerForm {
+    display: inline-block;
+}
+
+#paginaNummer {
+    display: inline-block;
+    width: 2rem;
+}
+
+/**** Spotlight sectie Style ****/
+
+#spotlight {
+    height: fit-content;
+}
+
+.slider_container {
+    box-shadow: 1px 0px 7.5px 0px rgba(0, 0, 0, 0.65) inset;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 27rem;
+}
+
+.artikels_slider {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.artikels_slider .artikelContainer {
+    display: inline-block;
+}
+
+/* Next & previous Knopjes */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    top: 0;
+    width: auto;
+    padding: 1em;
+    color: var(--primary-black);
+    font-weight: bold;
+    font-size: 1.125em;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    height: 100%;
+    z-index: 9999;
+}
+
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--huisstijl-groen);
+}
+
+.prev:focus-visible,
+.next:focus-visible {
+    color: var(--huisstijl-groen);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/**** =============== Zoek Formulier Style =============== ****/
+
+#zoekFormulier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#zoekFormulier button {
+    background-color: var(--huisstijl-zwart);
+    color: var(--huisstijl-wit);
+    font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    height: 1.40rem;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+#zoekFormulier button:hover {
+    background-color: var(--huisstijl-groen);
+    color: var(--huisstijl-wit);
+}
+
+#zoekFormulier input[type="text"] {
+    font-family: inherit;
+}
+
+#zoekFormulier input[type="text"]::placeholder {
+    font-family: inherit;
+}
+
+
+@media (max-width: 600px) {
+    #zoekFormulier {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%; /* Pas aan op basis van de gewenste maximale breedte van het formulier */
+        margin: 0 auto; /* Centreert de formulieren */
+    }
+
+    #zoekFormulier input[type="text"],
+    #zoekFormulier button {
+        width: 100%;
+        /* Of de gewenste breedte */
+        padding: 1.25em;
+        margin-bottom: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    #zoekFormulier form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #zoekFormulier button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #zoekFormulier div button {
+        margin-bottom: 0.5rem;
+    }
+
+    #zoekFormulier div button:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/**** =============== Sorteer Formulier Style =============== ****/
+
+#sorteerFormulier {
+    padding-top: 5px;
+}
+
+#sorteerFormulier button {
+    background-color: var(--huisstijl-zwart);
+    color: var(--huisstijl-wit);
+    font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    height: 1.40rem;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+#sorteerFormulier button:hover {
+    background-color: var(--huisstijl-groen);
+    color: var(--huisstijl-wit);
+}
+
+#sorteerFormulier select {
+    font-family: inherit;
+}
+
+@media (max-width: 600px) {
+    #sorteerFormulier {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%; /* Pas aan op basis van de gewenste maximale breedte van het formulier */
+        margin: 0 auto; /* Centreert de formulieren */
+        
+    }
+
+    #sorteerFormulier select,
+    #sorteerFormulier button {
+        width: 100%; /* Of de gewenste breedte */
+        padding: 1.25em;
+        margin-bottom: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    #sorteerFormulier form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sorteerFormulier button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #sorteerFormulier div button {
+        margin-bottom: 0.5rem;
+    }
+
+    #sorteerFormulier div button:last-child {
+        margin-bottom: 0;
+    }
+}
+.foutmeldingen {
+    margin-top: 20px;
+}
+
+/* Producten (rechts) ========================= */
+
+div#producten {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Categorieën (links) ======================== */
+
+div#categorieen {
+    width: 130px;
+    padding-left: 30px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    align-items: center;
+}
+
+/* Lijst met categorieën en subcategorieën */
+
+div#categorieen ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+}
+
+div#categorieen ul li {
+    padding: 3px 0;
+}
+
+div#categorieen ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+
+div#categorieen ul li a.actief {
+    font-weight: bold;
+}
+
+div#categorieen ul li a:hover {
+    color: var(--huisstijl-groen);
+}
+
+.hoofdCategorie {
+    margin-bottom: 10px;
+}
+
+.hoofdCategorie .actief {
+    font-size: 1.2rem;
+    border-bottom: #000000;
+}
+
+.subCategorie {
+    margin-left: 20px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.subCategorie .actief {
+    font-size: 1.1rem;
+}
+
+.subSubCategorie {
+    margin-left: 30px;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+.subSubCategorie .actief {
+    font-size: 1rem;
+}
+
+/* Mobiele weergave voor categorieën */
+
+#categorieKnopDiv {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#categorieKnopDiv img {
+    margin-left: 3px;
+    height: 15px;
+}
+
+#categorieKnopDiv h2 {
+    margin: 0;
+    transition: 0.2s;
+}
+
+#categorieKnopDiv:hover {
+    color: var(--huisstijl-groen);
+}
+
+@media (min-width: 601px) {
+    #categorieKnopDiv {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    #overzicht {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div#categorieen {
+        display: none;
+        position: relative;
+        top: 0;
+        align-self: flex-start;
+        justify-content: center;
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    div#categorieen h2 {
+        display: none;
+    }
+
+    .subCategorie {
+        margin-left: 0;
+    }
+}

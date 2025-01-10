@@ -1,0 +1,98 @@
+/* TYPOGRAFIE */
+body {
+    font-family: sans-serif;
+    font-size: 100%;
+}
+
+/* KLEURSCHEMA'S */
+:root {
+    --huisstijl-zwart: #000000;
+    --huisstijl-wit: #FFFFFF;
+    --huisstijl-groen: #ABD7A8;
+}
+
+body {
+    background: var(--huisstijl-wit);
+    color: var(--huisstijl-zwart);
+}
+
+#winkelmand-container {
+    width: 20vw;
+    min-width: 400px;
+    height: auto;
+    max-height: 32vh;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+@media (max-width: 600px) {
+    #winkelmand-container {
+        min-width: 0px;
+        width: 90%;
+    }
+}
+
+#selectie {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1rem 0;
+    padding-top: 20px;
+}
+
+th, td {
+    text-align: left;
+}
+
+tfoot td:first-child {
+    padding-right: 5px;
+}
+
+tfoot tr {
+    display: flex;
+    padding-top: 1rem;
+}
+
+/*Het verwijder icoontje*/
+#winkelmand-container img {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+/*CUSTOM SCROLLBAR*/
+aside::-webkit-scrollbar {
+    width: 20px;
+}
+
+aside::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+aside::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Knoppen */
+#knoppen-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.button-link {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-link:hover {
+    background-color: #45a049;
+    transition: background-color 0.5s ease;
+}

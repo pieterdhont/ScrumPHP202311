@@ -1,0 +1,316 @@
+/* TYPOGRAFIE */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 100%;
+}
+
+.rechts_sectie h1 {
+  font-size: 2rem;
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+
+.rechts_sectie h2 {
+  font-size: 1.25rem;
+  margin: 0.4rem 0;
+  width: fit-content;
+}
+
+.rechts_sectie p {
+  line-height: 175%;
+}
+
+.review {
+  text-align: center;
+}
+
+.ster_label {
+  font-size: 2rem;
+}
+
+/* KLEURENSCHEMAS */
+
+:root {
+  --huisstijl-zwart: #000000;
+  --huisstijl-wit: #FFFFFF;
+  --huisstijl-groen: #ABD7A8;
+}
+
+.ster_label {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background: var(--huisstijl-wit);
+  color: var(--huisstijl-zwart);
+}
+
+/**** STRUCTUUR EN LAY-OUT ****/
+
+body {
+  min-height: 100vh;
+}
+
+#categorie-pad {
+  display: flex;
+  justify-content: space-between;
+  height: 1rem;
+  width: 30%;
+}
+
+/*Categorie pad opmaak*/
+#categorie-pad img {
+  height: 100%;
+  display: inline;
+  object-fit: contain;
+
+}
+
+#categorie-pad a {
+  text-decoration: none;
+  color: var(--huisstijl-zwart);
+  transition: color 200ms;
+}
+
+#categorie-pad a:hover {
+  text-decoration: none;
+  color: var(--huisstijl-groen);
+}
+
+
+.container {
+  max-width: 1024px;
+  margin: 5rem auto;
+  display: flex;
+}
+
+.rechts_sectie {
+  width: 44rem;
+}
+
+.fotoContainer {
+  width: 20rem;
+  height: 20rem;
+  display: grid;
+  place-items: center;
+}
+
+.fotoContainer img {
+  width: 15rem;
+}
+
+.artikelDetails_container {
+  display: flex;
+  margin: 0 0 1rem 1rem;
+}
+
+.extra_details {
+  margin-left: 1rem;
+}
+
+.artikelReviews {
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--huisstijl-zwart);
+}
+
+.score {
+  width: fit-content;
+  color: rgba(0, 0, 0, 0);
+  background: linear-gradient(90deg, var(--huisstijl-groen) var(--percent), rgba(0, 0, 0, 0.2) var(--percent));
+  background-clip: initial;
+  -webkit-background-clip: text;
+  font-size: 2rem;
+  margin: 0 auto 0 auto;
+  cursor: default;
+}
+
+textarea {
+  width: 80%;
+  height: 6rem;
+}
+
+
+
+/**** Toevoeg aan winkelmand knop style ****/
+
+.container button, .container input[type="submit"] {
+  background-color: var(--huisstijl-zwart);
+  color: var(--huisstijl-wit);
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  margin-right: 1rem;
+  height: 1.75rem;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+.container input[type="submit"] {
+  display: block;
+}
+
+.wrapper .container button:focus, .wrapper .container input[type="submit"]:focus {
+  outline: 3px solid var(--huisstijl-groen);
+}
+
+.wrapper .container button:hover, .wrapper .container input[type="submit"]:hover {
+  background-color: var(--huisstijl-groen);
+}
+
+/* Next & previous Knopjes */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  top: 0;
+  width: auto;
+  padding: 0 1em;
+  color: var(--primary-black);
+  font-weight: bold;
+  font-size: 1.125em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  height: 100%;
+  z-index: 99999;
+}
+
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--huisstijl-groen);
+}
+
+.prev:focus-visible, .next:focus-visible {
+  color: var(--huisstijl-groen);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/**** Geef score via sterren style ****/
+
+.sterrenScore {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.ster_radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ster_label {
+  padding: 0 0.1rem;
+}
+
+.ster_radio+.ster_label:hover {
+  cursor: pointer;
+}
+
+#ster5:hover~.ster_label,
+#ster4:hover~.ster_label,
+#ster3:hover~.ster_label,
+#ster2:hover~.ster_label,
+#ster1:hover~.ster_label {
+  color: rgba(171, 215, 168, 0.65);
+}
+
+#ster5:checked~.ster_label,
+#ster4:checked~.ster_label,
+#ster3:checked~.ster_label,
+#ster2:checked~.ster_label,
+#ster1:checked~.ster_label {
+  color: var(--huisstijl-groen);
+}
+
+.artikelVoorraad {
+  color: red;
+}
+
+/**** Responsiveness ****/
+@media screen and (max-width: 1024px) {
+  .fotoContainer {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .rechts_sectie {
+    width: 70vw;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .fotoContainer {
+    width: 100%;
+    height: 40vw;
+  }
+
+  .rechts_sectie {
+    width: 100%;
+  }
+
+  .rechts_sectie > *:not(.artikelReviews, button),
+  .artikelReviews h2 {
+    padding-left: 2rem;
+  }
+
+  .container button {
+    margin-left: 2rem;
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  
+  .artikelDetails_container {
+    flex-direction: column;
+  }
+
+  .extra_details {
+    margin: 0;
+  }
+
+  .fotoContainer {
+    height: 60vw;
+  }
+
+
+}
+
+
+@media screen and (max-width:480px) {
+  .fotoContainer {
+    height: 80vw;
+  }
+
+  textarea {
+    height: 8rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  
+}

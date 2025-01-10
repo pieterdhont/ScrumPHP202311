@@ -1,0 +1,116 @@
+/* contact.css */
+
+/* TYPOGRAFIE */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 100%;
+}
+
+/* KLEURSCHEMA'S */
+:root {
+  --huisstijl-zwart: #000000;
+  --huisstijl-wit: #ffffff;
+  --huisstijl-groen: #abd7a8;
+}
+
+body {
+  background: var(--huisstijl-wit);
+  color: var(--huisstijl-zwart);
+}
+
+/* FORMULIERSTIJLEN */
+label {
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: flex-start;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #45a049;
+  color: var(--huisstijl-wit);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: var(--huisstijl-groen);
+}
+
+/* LAYOUTSTIJLEN */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  min-height: 500px;
+  margin: auto;
+  background-color: var(--huisstijl-wit);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px #0000001a;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #ddd;
+}
+
+.contact-details,
+.contact-form {
+  width: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.contact-details {
+  border-right: solid 1px #ddd;
+}
+
+.success-message {
+  color: #45a049;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 10px;
+  position: fixed;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* Media query voor mobiele weergave */
+@media only screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-details,
+  .contact-form {
+    width: 100%;
+    border-right: none;
+    padding: 0;
+  }
+
+  .contact-details {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #ddd;
+  }
+
+  .success-message {
+    max-width: 100%;
+  }
+}
